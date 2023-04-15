@@ -1,3 +1,5 @@
+import { CrawlerFactory } from './CrawlerFactory.js';
+
 chrome.action.onClicked.addListener(async (tab) => {
     const crawler = CrawlerFactory.createCrawler(tab.url);
     const data = await crawler.crawl();
